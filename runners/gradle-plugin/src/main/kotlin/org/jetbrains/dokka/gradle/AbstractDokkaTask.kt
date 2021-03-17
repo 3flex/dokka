@@ -45,6 +45,10 @@ abstract class AbstractDokkaTask : DefaultTask() {
         .safeConvention(DokkaDefaults.failOnWarning)
 
     @Input
+    val suppressObviousFunctions: Property<Boolean> = project.objects.safeProperty<Boolean>()
+        .safeConvention(DokkaDefaults.suppressObviousFunctions)
+
+    @Input
     val offlineMode: Property<Boolean> = project.objects.safeProperty<Boolean>()
         .safeConvention(DokkaDefaults.offlineMode)
 
